@@ -1,7 +1,5 @@
 package com.ssg.webmvc.homework;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletContext;
 import java.sql.*;
 
 public class MemberDAO {
@@ -31,7 +29,7 @@ public class MemberDAO {
     }
 
     public int addMember(MemberVO member) throws SQLException {
-        System.out.println("[addMember ok]");
+        System.out.println("[MemberDAO - addMember ok]");
         try {
             connDB();
             String sql = "INSERT INTO memberInfo (id, password, gender, hobby) VALUES (?, ?, ?, ?);";
@@ -41,10 +39,8 @@ public class MemberDAO {
             pstmt.setString(3, member.getGender());
             pstmt.setString(4, member.getHobby());
             return pstmt.executeUpdate();
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return 0;
         } finally{
+            if (pstmt!=null) pstmt.close();
             if (conn != null) conn.close();
         }
     }

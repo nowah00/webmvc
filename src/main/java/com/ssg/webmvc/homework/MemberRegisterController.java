@@ -16,12 +16,12 @@ public class MemberRegisterController extends HttpServlet {
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        System.out.println("[doPost OK]");
+        System.out.println("[MemberRegisterController - doPost OK]");
         doHandle(req, resp);
     }
 
     public void doHandle(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-        System.out.println("[doHandle OK]");
+        System.out.println("[MemberRegisterController - doHandle OK]");
         MemberVO member = new MemberVO();
         MemberDAO memberDAO = new MemberDAO();
 

@@ -11,7 +11,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>회원가입 결과</title>
+    <title>회원가입 결과 페이지</title>
 </head>
 <body>
 <h1>회원가입 결과</h1>

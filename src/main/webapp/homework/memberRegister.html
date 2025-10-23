@@ -19,16 +19,16 @@
   </script>
 </head>
 <body>
-<h1>회원가입</h1>
+<h1>회원가입 페이지</h1>
 <p>아이디, 비밀번호, 성별, 취미를 입력해주세요.</p>
 <hr>
 <form name="frmMemberRegister" method="post" action="/homework/memberRegister">
   <p>아이디</p>
-  <input type="text" name="user_id" required>
+  <input type="text" name="user_id" required placeholder="아이디" autocomplete="off">
   <p>비밀번호</p>
-  <input type="password" name="user_pwd" required>
+  <input type="password" name="user_pwd" required placeholder="비밀번호" autocomplete="off">
   <p>비밀번호 확인</p>
-  <input type="password" name="user_pwd_check" required>
+  <input type="password" name="user_pwd_check" required placeholder="비밀번호 재입력" autocomplete="off">
   <br><br>
   <fieldset>
     <legend>성별</legend>
